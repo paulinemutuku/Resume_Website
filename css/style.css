@@ -23,7 +23,8 @@ html{
 
 body{
     background: #cbb2ce;
-    padding-left: 30rem;
+    padding: 0;
+    margin: 0;
 }
 
 section{
@@ -61,69 +62,66 @@ section{
 
 /* ===== Header section starts ===== */
 
-header{
+header {
     position: fixed;
-    top:0; left:0; bottom:0;
-    background:#0a0a0a;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0a0a0a;
     display: flex;
-    align-items: justify;
+    align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    flex-flow: column;
-    padding:8rem 2rem;
-    width:30rem;
+    padding: 2rem;
     text-align: center;
-}
-
-header .logo{
+  }
+  
+  header .logo {
     text-transform: uppercase;
-    color:#fff;
+    color: #fff;
     font-size: 3rem;
     font-weight: bolder;
     padding-bottom: 0;
-}
-
-header .logo span{
-    text-transform: uppercase;
-    color:var(--main-color);
-}
-
-header .navbar a{
-    display: block;
+  }
+  
+  header .navbar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style-type: none;
+  }
+  
+  header .navbar a {
     font-size: 1.8rem;
-    color:#fff;
-    margin:2rem 0;
-    text-align: left;
+    color: #fff;
     padding: 8px 20px;
+    text-decoration: none;
+  }
+  
+  header .navbar a:hover {
+    color: var(--main-color);
+    letter-spacing: 0.2rem;
+  }
+  
+  header .follow a {
+    font-size: 3.5rem; /* Increase the font-size here */
+    color: #fff;
+    margin: 0 .7rem;
 }
 
-header .navbar a:hover{
-    letter-spacing: .2rem;
-    color:var(--main-color);
+header .follow a:hover {
+    color: var(--main-color);
 }
-
-header .follow a{
-    font-size: 2.5rem;
-    color:#fff;
-    margin:0 .7rem;
-}
-
-header .follow a:hover{
-    color:var(--main-color);
-}
-
-#menu-bars{
-    position: fixed;
-    top:1rem; right: 1rem;
-    z-index: 10000;
-    background:var(--main-color);
-    color:#fff;
-    border-radius: .5rem;
-    padding:1rem 1.5rem;
-    font-size: 3rem;
-    cursor:pointer;
+  #menu-bars {
     display: none;
-}
+  }
+  
+  @media (max-width: 991px) {
+    header .navbar {
+      flex-direction: column;
+    }
+  }
+  
 
 /* ===== Header section ends ===== */
 
@@ -167,15 +165,16 @@ header .follow a:hover{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap:1.5rem;
+    gap: .5rem;
 }
 
 .home .image{
-    flex:1 1 40rem;
+    flex:1 1 30rem;
+    margin-top: 8rem;
 }
 
 .home .image img{
-    width:70%;
+    width:100%;
 }
 
 .home .content{
@@ -233,7 +232,8 @@ header .follow a:hover{
 }
 
 .about .row-1 .image{
-    flex:1 1 25rem;
+    flex:1 1 20rem;
+    height: 400px;
 }
 
 .about .row-1 .image img{
